@@ -1,0 +1,47 @@
+//////////////git push////////////////
+
+git add *
+git commit -m "sadak se uthakr star banaunga"
+git push origin master
+
+
+
+\\\\\\\\Mysql Server\\\\\\\
+
+sudo yum install mysql mysql-server -y
+
+mysql -h database-1.c29xigrfmiln.ap-south-1.rds.amazonaws.com -u admin -p
+
+==================================================================
+UserData commands(while making instance ec2):
+
+#!/bin/bash
+sudo yum update -y
+sudo yum install ruby -y
+sudo yum install wget -y
+sudo yum install httpd -y
+cd /home/ec2-user
+sudo wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+sudo chmod +x ./install
+sudo ./install auto
+sudo service httpd start
+
+
+///////////////////Getting error: no op in pm////////////////
+			      run cmd in putty//////
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+sudo yum install -y httpd mariadb-server
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl is-enabled httpd
+
+
+Misc:
+//////////Role////////////
+
+Name: Ec2instancerole
+Policy: AmazonEC2RoleforAWSCodeDeploy
+==========================================
+Name:CodeDeployServiceRole
+Policy: AWSCodeDeployRole
+==========================================
